@@ -14,6 +14,7 @@ class MoviesViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var moviesTableView: UITableView!
+    @IBOutlet weak var errorLbl: UILabel!
     
     // MARK: - Private Properties
     
@@ -31,6 +32,10 @@ class MoviesViewController: UIViewController {
         let output = moviesViewModel.prepare()
         
         setupTable(movies: output.movies)
+        output.errorMessage
+        .bind(to: errorLbl.rx.text)
+        .disposed(by: disposeBag)
+        
     }
 }
 
@@ -52,5 +57,6 @@ extension MoviesViewController {
                 return [SectionOfMovies(items: movies)]
             }.bind(to: moviesTableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
+        
     }
 }

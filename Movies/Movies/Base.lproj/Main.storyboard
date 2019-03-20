@@ -68,10 +68,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEn-9P-OQ0">
+                                <rect key="frame" x="187.5" y="343.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="KEn-9P-OQ0" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Ge0-de-Y2h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YBd-ob-mii" secondAttribute="trailing" id="RiD-5U-X3g"/>
+                            <constraint firstItem="KEn-9P-OQ0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fWv-vv-YbS"/>
                             <constraint firstItem="YBd-ob-mii" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="ja1-rl-w61"/>
                             <constraint firstItem="YBd-ob-mii" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qq8-Ha-n9J"/>
                             <constraint firstAttribute="bottomMargin" secondItem="YBd-ob-mii" secondAttribute="bottom" id="y0t-JX-Oy4"/>
@@ -80,6 +88,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="errorLbl" destination="KEn-9P-OQ0" id="rhk-lJ-t27"/>
                         <outlet property="moviesTableView" destination="YBd-ob-mii" id="Rtx-PG-DeR"/>
                     </connections>
                 </viewController>
